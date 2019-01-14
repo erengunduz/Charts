@@ -786,7 +786,8 @@ open class BarLineChartViewBase: ChartViewBase, BarLineScatterCandleBubbleChartD
                 _outerScrollView?.nsuiIsScrollEnabled = true
                 _outerScrollView = nil
             }
-            
+            lastHighlighted = nil
+            highlightValue(nil, callDelegate: true)
             delegate?.chartViewDidEndPanning?(self)
         }
     }
